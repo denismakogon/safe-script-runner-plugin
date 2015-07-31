@@ -1,2 +1,2 @@
 # safe-script-runner-plugin
-This plugin wrapps Cloudufy fabric plugin tasks but disables every task except run_script task
+This plugin wraps Cloudify Fabric plugin tasks but disables every task except run_script task

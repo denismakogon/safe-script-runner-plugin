@@ -1,0 +1,4 @@
+pbr>=0.11,<2.0
+cloudify-plugins-common==3.2
+cloudify-rest-client==3.2
+cloudify-fabric-plugin==3.2
