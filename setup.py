@@ -10,9 +10,20 @@
 #    License for the specific language governing permissions and limitations
 #    under the License.
 
-import setuptools
 
+from setuptools import setup
 
-setuptools.setup(
-    setup_requires=['pbr>=1.3'],
-    pbr=True)
+setup(
+    name='safe_script_runner_plugin',
+    version='1.2.0m1',
+    author='Denis Makogon',
+    author_email='lildee1991@gmail.com',
+    packages=['safe_script_runner_plugin'],
+    license='LICENSE',
+    description='Plugin for remotely running fabric run_script task',
+    install_requires=[
+        'cloudify-plugins-common==3.2',
+        'fabric==1.8.3',
+        'six>=1.8.0',
+    ]
+)
