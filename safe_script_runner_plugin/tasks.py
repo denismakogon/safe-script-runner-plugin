@@ -40,7 +40,8 @@ def _fabric_env(fabric_env, warn_only):
             (final_env.get('key') and final_env.get('user'))):
         raise tasks.exceptions.NonRecoverableError(
             'access credentials not supplied '
-            '(you must supply at least one of key_filename or password)')
+            '(you must supply at least one of key_filename or password'
+            ' or pair of key and user)')
     tasks.ctx.logger.info('environment prepared successfully')
     return final_env
 
