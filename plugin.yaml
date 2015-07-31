@@ -4,4 +4,4 @@
 plugins:
     safe_script_runner:
         executor: central_deployment_agent
-        source: https://github.com/denismakogon/safe-script-runner-plugin/archive/v1.2.0m1.tar.gz
+        source: https://github.com/denismakogon/safe-script-runner-plugin/archive/v1.2.0m2.tar.gz
