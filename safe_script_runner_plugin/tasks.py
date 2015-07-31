@@ -49,8 +49,13 @@ def _fabric_env(fabric_env, warn_only):
 def run_script(script_path, fabric_env=None, process=None, **kwargs):
     safe_fabric_env = tasks._fabric_env
     tasks._fabric_env = _fabric_env
-    result = tasks.run_script(script_path,
-                              fabric_env=fabric_env,
-                              process=process, **kwargs)
-    tasks._fabric_env = safe_fabric_env
-    return result
+    try:
+        result = tasks.run_script(script_path,
+                                  fabric_env=fabric_env,
+                                  process=process, **kwargs)
+        tasks._fabric_env = safe_fabric_env
+        return result
+    except BaseException as e:
+        tasks.ctx.logger.error(str(e))
+        tasks._fabric_env = safe_fabric_env
+        raise e
