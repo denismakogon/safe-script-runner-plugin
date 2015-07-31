@@ -11,7 +11,6 @@
 #    under the License.
 
 import os
-import importlib
 import json
 import requests
 import tempfile
